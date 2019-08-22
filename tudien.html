@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input id="input" type ="text">
+<button onclick="dich();">search</button>
+<h1><output id="display"></output></h1>
+<body>
+<script>
+
+
+function dich() {
+     let wordArr=['hello','goodbye','good','eat','victim','enemy'];
+    let vietnameseArr=['xin chào','tạm biệt','tốt','ăn','nạn nhân','enemy'];
+    let word = document.getElementById("input").value;
+    for(let i = 0;i<wordArr.length;i++){
+        //for(let j = 0;j<vietnameseArr.length;j++) {
+        if (word === wordArr[i]) {
+            document.getElementById("display").innerHTML = vietnameseArr[i];
+            break;
+        }else {
+            document.getElementById("display").innerHTML = "not found";
+        }
+    }
+}
+</script>
+</body>
+</html>
